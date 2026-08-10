@@ -1,0 +1,222 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  overflow: hidden;
+  font-family: 'Anek Telugu', 'Inter', sans-serif;
+}
+
+.hero-bg-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-video-blur {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(30px);
+  transform: scale(1.1); /* Hide blurred edges */
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.hero-video-main {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.hero-overlay-darken {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.hero-top-border {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  z-index: 4; /* must be higher than the video overlay */
+}
+
+.hero-border-image {
+  width: 100%;
+  display: block;
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.hero-logo-container {
+  margin-bottom: 24px;
+  width: 180px;
+  height: 180px;
+}
+
+.hero-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+.hero-subtitle {
+  font-family: 'Nexa', 'Inter', sans-serif;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.352px;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-family: 'Anek Telugu', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.btn-book-now {
+  background-color: #115020;
+  color: white;
+  font-family: 'Anek Telugu', sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  padding: 20px 48px 14px;
+  border-radius: 200px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-book-now:hover {
+  background-color: #0d3d18;
+  transform: scale(1.05);
+}
+
+.hero-bottom-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 549px; /* From design */
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.scroll-down-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.scroll-text {
+  font-family: 'Anek Telugu', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.scroll-arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg); /* Arrow points down */
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(180deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(180deg);
+  }
+}
+
+.whatsapp-icon-container {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon-container:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 40px;
+    padding: 0 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .btn-book-now {
+    font-size: 24px;
+    padding: 8px 30px 12px;
+  }
+  
+  .hero-bottom-actions {
+    height: auto;
+    margin-top: 100px;
+  }
+  
+  .whatsapp-icon-container {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}

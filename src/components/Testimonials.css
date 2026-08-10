@@ -1,0 +1,146 @@
+.testimonials-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.testimonials-title {
+  font-family: 'Anek Telugu', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #115020;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.testimonial-card {
+  background-color: #fcffea;
+  border-radius: 20px;
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-family: 'Anek Telugu', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #111111;
+  margin: 0;
+}
+
+.testimonial-location {
+  font-family: 'Nexa', sans-serif;
+  font-size: 14px;
+  color: #888888;
+  margin: 0;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.testimonial-text {
+  font-family: 'Nexa', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0;
+}
+
+.testimonials-controls {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.control-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-card {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 50px 0;
+  }
+
+  .testimonials-title {
+    font-size: 28px;
+  }
+  
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
