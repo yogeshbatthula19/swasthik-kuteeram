@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DirectionsCard from './DirectionsCard';
 import './Footer.css';
 
 const Footer = () => {
@@ -28,6 +29,11 @@ const Footer = () => {
           <p className="footer-copyright">
             &copy;{new Date().getFullYear()} &middot; All rights reserved.
           </p>
+        </div>
+
+        {/* Middle Column */}
+        <div className="footer-middle">
+          <DirectionsCard />
         </div>
 
         {/* Right Column */}

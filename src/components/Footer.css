@@ -20,7 +20,14 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 400px;
+  max-width: 300px;
+}
+
+.footer-middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
 }
 
 .footer-logo-container {
@@ -142,6 +149,11 @@
   .footer-container {
     flex-direction: column;
     gap: 60px;
+  }
+  
+  .footer-middle {
+    width: 100%;
+    padding: 0;
   }
   
   .footer-right {

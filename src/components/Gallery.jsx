@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import './Gallery.css';
 
 const galleryImages = [
+  "/assets/resort-exterior.jpg",
+  "/assets/resort-night.jpg",
+  "/assets/haldi-ceremony.jpg",
+  "/assets/gallery-1.jpg",
+  "/assets/gallery-2.jpg",
+  "/assets/gallery-3.jpg",
+  "/assets/gallery-4.jpg",
+  "/assets/gallery-5.jpg",
+  "/assets/swastik-1.png",
+  "/assets/swastik-2.png",
+  "/assets/swastik-3.png",
+  "/assets/swastik-4.png",
   "/assets/swastik-5.png",
   "/assets/swastik-6.png",
   "/assets/swastik-7.png",

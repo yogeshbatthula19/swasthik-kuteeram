@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
 import Footer from './components/Footer';
-import AudioPlayer from './components/AudioPlayer';
 import BookingModal from './components/BookingModal';
 import './App.css';
 
@@ -70,9 +69,17 @@ function AppContent() {
         <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
 
-      <AudioPlayer />
       <Footer />
       
+      <a 
+        href="https://wa.me/917670873921?text=Hi%20Swastik%20Kuteeram,%20I%20would%20like%20to%20know%20more%20about%20your%20staycation."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp"
+      >
+        <img src="/assets/whatsapp-icon.svg" alt="WhatsApp" />
+      </a>
+
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   );

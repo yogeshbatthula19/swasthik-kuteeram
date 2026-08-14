@@ -2,7 +2,15 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './GalleryPage.css';
 
-const allGalleryImages = [
+const galleryImages = [
+  "/assets/resort-exterior.jpg",
+  "/assets/resort-night.jpg",
+  "/assets/haldi-ceremony.jpg",
+  "/assets/gallery-1.jpg",
+  "/assets/gallery-2.jpg",
+  "/assets/gallery-3.jpg",
+  "/assets/gallery-4.jpg",
+  "/assets/gallery-5.jpg",
   "/assets/swastik-1.png",
   "/assets/swastik-2.png",
   "/assets/swastik-3.png",
@@ -29,13 +37,13 @@ const GalleryPage = () => {
       </div>
       
       <div className="gallery-page-grid">
-        {allGalleryImages.map((src, index) => (
+        {galleryImages.map((src, index) => (
           <motion.div 
             key={index} 
             className="gallery-page-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
           >
             <img src={src} alt={`Swastik Kuteeram ${index + 1}`} className="gallery-page-img" />

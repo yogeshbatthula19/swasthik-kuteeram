@@ -55,7 +55,7 @@ const Features = () => {
           className="features-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
           <h2 className="why-title">Why Manduva?</h2>
@@ -70,7 +70,7 @@ const Features = () => {
           className="features-pill-container"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {featuresData.map((feature, index) => (
@@ -99,17 +99,17 @@ const Features = () => {
           className="why-manduva-images"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="manduva-img-wrapper left-img">
-            <img src="/assets/swastik-1.png" alt="Manduva Architecture" />
+            <img src="/assets/gallery-1.jpg" alt="Manduva Architecture" />
           </div>
           <div className="manduva-img-wrapper center-img">
-            <img src="/assets/swastik-2.png" alt="Resort View" />
+            <img src="/assets/resort-exterior.jpg" alt="Resort View" />
           </div>
           <div className="manduva-img-wrapper right-img">
-            <img src="/assets/swastik-3.png" alt="Manduva Stay" />
+            <img src="/assets/resort-night.jpg" alt="Manduva Stay" />
           </div>
         </motion.div>
       </div>

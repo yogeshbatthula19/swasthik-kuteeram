@@ -70,7 +70,7 @@ const Experience = () => {
           className="experience-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           <p className="experience-subtitle-top">Experience the Manduva Lifestyle</p>
@@ -84,7 +84,7 @@ const Experience = () => {
                 className="experience-item"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="experience-icon">
@@ -110,7 +110,7 @@ const Experience = () => {
           className="experience-footer text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="experience-footer-text">

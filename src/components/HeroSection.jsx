@@ -11,14 +11,6 @@ const HeroSection = ({ onOpenBooking }) => {
       <div className="hero-bg-container">
         <video 
           src="/assets/hero-video.mp4" 
-          className="hero-video-blur" 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-        />
-        <video 
-          src="/assets/hero-video.mp4" 
           className="hero-video-main" 
           autoPlay 
           muted 
@@ -81,9 +73,6 @@ const HeroSection = ({ onOpenBooking }) => {
                 <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-          </div>
-          <div className="whatsapp-icon-container">
-            <img src="/assets/whatsapp-icon.svg" alt="WhatsApp" className="whatsapp-icon" />
           </div>
         </motion.div>
       </div>
