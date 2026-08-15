@@ -1,8 +1,37 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Celebrate.css';
 
+const images = [
+  '/assets/celebration-main.jpg',
+  '/assets/celebration-birthday.jpg',
+  '/assets/celebration-mehendi.jpg',
+  '/assets/celebration-corporate.jpg'
+];
+
 const Celebrate = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000); // Auto-advance every 4 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <section className="celebrate-section">
       <div className="container celebrate-container">
@@ -20,6 +49,7 @@ const Celebrate = () => {
               Host weddings, engagements, birthdays, family reunions, corporate retreats, or festive gatherings in a venue where heritage and nature create the perfect backdrop. Because every celebration deserves a story worth remembering.
             </p>
           </motion.div>
+          
           <motion.div 
             className="celebrate-image-wrapper"
             initial={{ opacity: 0, x: 50 }}
@@ -27,12 +57,42 @@ const Celebrate = () => {
             viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <div className="celebrate-image-placeholder">
-              <img 
-                src="/assets/haldi-ceremony.jpg" 
-                alt="Celebrate at Swastik" 
-                className="celebrate-img"
-              />
+            <div className="celebrate-carousel-container">
+              <AnimatePresence>
+                <motion.img 
+                  key={currentIndex}
+                  src={images[currentIndex]}
+                  alt={`Celebrate at Swastik ${currentIndex + 1}`} 
+                  className="celebrate-img"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.2, ease: "easeInOut" }}
+                />
+              </AnimatePresence>
+              
+              <button className="carousel-control prev" onClick={goToPrev} aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              
+              <button className="carousel-control next" onClick={goToNext} aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              
+              <div className="carousel-indicators">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
+                    onClick={() => goToSlide(index)}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
