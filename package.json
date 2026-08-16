@@ -4,24 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server/index.js",
     "dev": "vite",
-    "server": "node server/index.js",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "express-rate-limit": "^8.6.2",
     "framer-motion": "^13.0.0",
-    "helmet": "^8.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2",
-    "resend": "^6.19.0"
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

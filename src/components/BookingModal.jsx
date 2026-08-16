@@ -29,17 +29,25 @@ const BookingModal = ({ isOpen, onClose }) => {
     setErrorMessage('');
     
     try {
-      const response = await fetch('/api/book', {
+      const payload = {
+        access_key: "8207b71d-11c4-4822-92b6-ebcc429086ce",
+        subject: `New Booking Enquiry from ${formData.name}`,
+        from_name: "Swastik Kuteeram Booking",
+        ...formData
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.status === 200) {
         setStatus('success');
         setTimeout(() => {
           onClose();
@@ -48,12 +56,12 @@ const BookingModal = ({ isOpen, onClose }) => {
         }, 3000);
       } else {
         setStatus('error');
-        setErrorMessage(data.error || 'Failed to send enquiry. Please try again.');
+        setErrorMessage(data.message || 'Failed to send enquiry. Please try again.');
       }
     } catch (err) {
       console.error('Error submitting form:', err);
       setStatus('error');
-      setErrorMessage('Network error. Ensure the local server is running.');
+      setErrorMessage('Network error. Please check your connection and try again.');
     }
   };
 
