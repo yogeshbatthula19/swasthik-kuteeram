@@ -28,7 +28,7 @@ app.post('/api/book', async (req, res) => {
   try {
     // 1. Send email to the Owner
     const ownerRes = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>', // This must be a verified domain in production
+      from: 'Swastik Kuteeram <booking@swastikkuteeram.com>', // This must be a verified domain in production
       to: OWNER_EMAIL,
       subject: `New Booking Enquiry from ${name}`,
       html: `
@@ -49,7 +49,7 @@ app.post('/api/book', async (req, res) => {
 
     // 2. Send confirmation email to the Client
     const clientRes = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>', // This must be a verified domain in production
+      from: 'Swastik Kuteeram <booking@swastikkuteeram.com>', // This must be a verified domain in production
       to: email,
       subject: 'Booking Enquiry Received - Swastik Kuteeram',
       html: `
