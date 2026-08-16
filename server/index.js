@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Initialize Resend with the API key from .env
 const resend = new Resend(process.env.RESEND_API_KEY);
-const OWNER_EMAIL = process.env.OWNER_EMAIL || 'owner@swasthikkuteeram.com';
+const OWNER_EMAIL = process.env.OWNER_EMAIL || 'swastik.kuteeram@gmail.com';
 
 app.post('/api/book', async (req, res) => {
   const { name, phone, email, date, guests, message } = req.body;
