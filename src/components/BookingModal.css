@@ -19,6 +19,8 @@
   border-radius: 20px;
   width: 90%;
   max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.3s ease;
@@ -81,7 +83,7 @@
   border: 1px solid rgba(17, 80, 32, 0.2);
   border-radius: 10px;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 16px;
   background-color: white;
   color: #333;
 }
@@ -154,8 +156,20 @@
 }
 
 @media (max-width: 600px) {
+  .modal-overlay {
+    padding: 15px;
+    box-sizing: border-box;
+  }
   .modal-content {
-    padding: 30px 20px;
+    padding: 25px 20px;
+    max-height: 80svh; /* Uses small viewport height to prevent iOS bottom bar overlap */
+  }
+  .modal-title {
+    font-size: 26px;
+  }
+  .modal-subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
   }
   .booking-form .form-row {
     flex-direction: column;
