@@ -51,11 +51,27 @@
 }
 
 .celebrate-description {
-  font-family: 'Nexa', sans-serif;
-  font-size: 28px;
-  color: #984000;
-  line-height: 1.5;
   margin: 0;
+}
+
+.celebration-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.celebration-list li {
+  font-family: 'Nexa', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #984000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   letter-spacing: -0.3px;
 }
 

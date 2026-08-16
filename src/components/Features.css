@@ -30,7 +30,8 @@
   font-family: 'Nexa', sans-serif;
   font-size: 24px;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .features-pill-container {

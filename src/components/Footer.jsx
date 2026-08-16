@@ -17,12 +17,13 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-logo-container">
             <img src="/assets/hero-logo.svg" alt="Swastik Kuteeram Logo" className="footer-logo" />
-            <h2 className="footer-brand">Swastik kuteeram</h2>
+            <h2 className="footer-brand">Swastik Kuteeram</h2>
           </div>
           
           <div className="footer-contact">
-            <p>+91 7670873921</p>
-            <p>info@swasthikkuteeram.mail</p>
+            <p>12-140/A, Kanaka Mamidi, Village, Moinabad, Telangana 501504</p>
+            <p>+91 76708 73921</p>
+            <p>swastik.kuteeram@gmail.com</p>
             <p className="footer-location">HYDERABAD, TELANGANA</p>
           </div>
           

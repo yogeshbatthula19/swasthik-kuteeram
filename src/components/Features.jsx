@@ -58,11 +58,9 @@ const Features = () => {
           viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="why-title">Why Manduva?</h2>
+          <h2 className="why-title">Swastik Kuteeram: Private Heritage Retreat Near Hyderabad</h2>
           <p className="why-subtitle">
-            Swastik Kuteeram is a private Manduva & Kerala-style resort just 20 minutes from<br/>
-            Neopolis, Hyderabad. 4 luxury AC bedrooms, a private swimming pool, and a<br/>
-            sprawling lawn for unforgettable moments.
+            Escape to Swastik Kuteeram, an exclusive Manduva and Kerala-style getaway just 20 minutes from Neopolis. Featuring 4 luxury AC bedrooms, a private swimming pool, and an expansive lawn, it is the perfect private sanctuary for peaceful stays and unforgettable celebrations.
           </p>
         </motion.div>
         

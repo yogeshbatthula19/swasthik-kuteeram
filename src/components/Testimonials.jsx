@@ -5,24 +5,24 @@ import './Testimonials.css';
 const testimonialsData = [
   {
     id: 1,
-    name: "Yogesh",
-    location: "Hyderabad",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100",
-    text: '"Perfect for our family celebration. Peaceful, beautiful, and unforgettable."'
+    name: "sudeer anugu",
+    location: "Google Review",
+    avatar: "https://ui-avatars.com/api/?name=sudeer+anugu&background=8d6e63&color=fff&size=100",
+    text: '"Great place to enjoy with friends & family. Well maintained, very clean rooms, and staff was very helpful.nice garden area & peaceful location. Will definitely recommend the place."'
   },
   {
     id: 2,
-    name: "Kirthi",
-    location: "Kakinada",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100",
-    text: '"A hidden gem near Hyderabad that brings Telugu heritage to life."'
+    name: "Katipally Bhargav Reddy",
+    location: "Google Review",
+    avatar: "https://ui-avatars.com/api/?name=Katipally+Bhargav+Reddy&background=546e7a&color=fff&size=100",
+    text: '"We thoroughly enjoyed our visit with family; the place is very well maintained and feels like a dream home anyone would love to own. It\'s especially beautiful during the monsoon season and perfect for summer night gatherings and parties."'
   },
   {
     id: 3,
-    name: "Rishi",
-    location: "Hyderabad",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100&h=100",
-    text: '"It felt like visiting our grandparents\' village - but with every modern comfort."'
+    name: "Ananya Reddy",
+    location: "Google Review",
+    avatar: "https://ui-avatars.com/api/?name=Ananya+Reddy&background=0277bd&color=fff&size=100",
+    text: '"Great place to enjoy with friends and family.Maintenance is great and room and pool are very clean.will definitely recommend the place."'
   }
 ];
 

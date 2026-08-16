@@ -6,7 +6,9 @@ const images = [
   '/assets/celebration-main.jpg',
   '/assets/celebration-birthday.jpg',
   '/assets/celebration-mehendi.jpg',
-  '/assets/celebration-corporate.jpg'
+  '/assets/celebration-poolparty.jpg',
+  '/assets/celebration-corporate-new.jpg',
+  '/assets/celebration-kittyparty.jpg'
 ];
 
 const Celebrate = () => {
@@ -18,7 +20,7 @@ const Celebrate = () => {
     }, 4000); // Auto-advance every 4 seconds
 
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex]);
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -45,9 +47,15 @@ const Celebrate = () => {
           >
             <p className="celebrate-subtitle">CELEBRATE EVERY OCCASION</p>
             <h2 className="celebrate-title">Your Special Moments Deserve a Beautiful Setting</h2>
-            <p className="celebrate-description">
-              Host weddings, engagements, birthdays, family reunions, corporate retreats, or festive gatherings in a venue where heritage and nature create the perfect backdrop. Because every celebration deserves a story worth remembering.
-            </p>
+            <div className="celebrate-description">
+              <ul className="celebration-list">
+                <li>🌿 Family Getaways & Staycations</li>
+                <li>💍 Intimate Weddings & Haldi / Mehendi Functions</li>
+                <li>🎂 Private Milestone Celebrations</li>
+                <li>💼 Executive & Leadership Team Retreats</li>
+                <li>🥂 Kitty Parties</li>
+              </ul>
+            </div>
           </motion.div>
           
           <motion.div 
