@@ -1,36 +1,28 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import './HeroSection.css';
 
 const HeroSection = ({ onOpenBooking }) => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    // Mobile Safari sometimes fails to autoplay even with the correct attributes.
-    // Forcing defaultMuted and manually calling play() fixes it.
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-      videoRef.current.play().catch((e) => {
-        console.error("Autoplay prevented:", e);
-      });
-    }
-  }, []);
-
   return (
     <section className="hero">
       <div className="hero-top-border">
         <img src="/assets/hero-border-top.svg" alt="" className="hero-border-image" />
       </div>
       <div className="hero-bg-container">
-        <video 
-          ref={videoRef}
-          src="/assets/hero-video.mp4" 
-          className="hero-video-main" 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
+        <div 
+          dangerouslySetInnerHTML={{
+            __html: `
+              <video 
+                class="hero-video-main" 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+              >
+                <source src="/assets/hero-video.mp4" type="video/mp4" />
+              </video>
+            `
+          }}
         />
         <div className="hero-overlay-darken"></div>
       </div>
