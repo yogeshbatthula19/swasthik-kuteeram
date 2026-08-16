@@ -2,8 +2,13 @@ import express from 'express';
 import cors from 'cors';
 import { Resend } from 'resend';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
@@ -68,6 +73,14 @@ app.post('/api/book', async (req, res) => {
     console.error('Server Error:', error);
     res.status(500).json({ error: 'Server crashed while sending emails.' });
   }
+});
+
+// Serve static frontend files from the 'dist' directory in production
+app.use(express.static(path.join(__dirname, '../dist')));
+
+// Catch-all route to serve the React app for any unhandled routes (for React Router)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 const PORT = process.env.PORT || 3001;
