@@ -4,6 +4,8 @@ import { Resend } from 'resend';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 
 dotenv.config();
 
@@ -11,14 +13,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors());
+
+// Security Middleware
+app.use(helmet());
+app.use(cors({ origin: process.env.NODE_ENV === 'production' ? 'https://swastikkuteeram.com' : '*' }));
 app.use(express.json());
+
+// Rate limiting for booking API
+const bookingLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 10, // limit each IP to 10 booking requests per windowMs
+  message: { error: 'Too many booking requests from this IP, please try again after an hour.' }
+});
 
 // Initialize Resend with the API key from .env
 const resend = new Resend(process.env.RESEND_API_KEY);
 const OWNER_EMAIL = process.env.OWNER_EMAIL || 'swastik.kuteeram@gmail.com';
 
-app.post('/api/book', async (req, res) => {
+app.post('/api/book', bookingLimiter, async (req, res) => {
   const { name, phone, email, date, guests, message } = req.body;
 
   if (!name || !phone || !email) {
