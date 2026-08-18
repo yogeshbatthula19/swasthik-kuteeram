@@ -20,7 +20,11 @@ const galleryImages = [
   "/assets/swastik-7.png",
   "/assets/swastik-8.png",
   "/assets/swastik-9.png",
-  "/assets/swastik-10.png"
+  "/assets/swastik-10.png",
+  "/assets/gallery-11.jpg",
+  "/assets/gallery-12.jpg",
+  "/assets/gallery-13.jpg",
+  "/assets/gallery-14.jpg"
 ];
 
 const Gallery = () => {
