@@ -101,13 +101,13 @@ const Features = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="manduva-img-wrapper left-img">
-            <img src="/assets/gallery-1.jpg" alt="Manduva Architecture" />
+            <img src="/assets/gallery-1.webp" alt="Manduva Architecture" loading="lazy" />
           </div>
           <div className="manduva-img-wrapper center-img">
-            <img src="/assets/resort-exterior.jpg" alt="Resort View" />
+            <img src="/assets/resort-exterior.webp" alt="Resort View" loading="lazy" />
           </div>
           <div className="manduva-img-wrapper right-img">
-            <img src="/assets/resort-night.jpg" alt="Manduva Stay" />
+            <img src="/assets/resort-night.webp" alt="Manduva Stay" loading="lazy" />
           </div>
         </motion.div>
       </div>

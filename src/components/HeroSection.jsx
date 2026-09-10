@@ -34,7 +34,7 @@ const HeroSection = ({ onOpenBooking }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img src="/assets/hero-logo.png" alt="Swastik Kuteeram Logo" className="hero-logo" />
+          <img src="/assets/hero-logo.webp" alt="Swastik Kuteeram Logo" className="hero-logo" fetchPriority="high" loading="eager" />
         </motion.div>
         
         <div className="hero-text-container">

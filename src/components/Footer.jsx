@@ -60,9 +60,9 @@ const Footer = () => {
       {/* Bottom Rangoli Pattern */}
       <div className="footer-bottom-pattern">
         <div className="footer-pattern-inner">
-          <img src="/assets/c22edecb888ac3eac92a50a283cf1532ad6f5bbf.svg" alt="" />
-          <img src="/assets/c22edecb888ac3eac92a50a283cf1532ad6f5bbf.svg" alt="" />
-          <img src="/assets/c22edecb888ac3eac92a50a283cf1532ad6f5bbf.svg" alt="" />
+          <img src="/assets/c22edecb888ac3eac92a50a283cf1532ad6f5bbf.svg" alt="" loading="lazy" />
+          <img src="/assets/c22edecb888ac3eac92a50a283cf1532ad6f5bbf.svg" alt="" loading="lazy" />
+          <img src="/assets/c22edecb888ac3eac92a50a283cf1532ad6f5bbf.svg" alt="" loading="lazy" />
         </div>
       </div>
     </footer>

@@ -53,7 +53,7 @@ function AppContent() {
       <header className={`header ${showHeader ? 'header-visible' : ''}`}>
         <div className="header-inner">
           <Link to="/" className="header-logo-link">
-            <img src="/assets/hero-logo.png" alt="Swastik Kuteeram Logo" className="header-logo" />
+            <img src="/assets/hero-logo.webp" alt="Swastik Kuteeram Logo" className="header-logo" fetchPriority="high" loading="eager" />
           </Link>
           <nav className="header-nav">
             <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>

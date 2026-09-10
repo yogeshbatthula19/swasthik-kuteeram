@@ -3,28 +3,28 @@ import { Link } from 'react-router-dom';
 import './Gallery.css';
 
 const galleryImages = [
-  "/assets/resort-exterior.jpg",
-  "/assets/resort-night.jpg",
-  "/assets/haldi-ceremony.jpg",
-  "/assets/gallery-1.jpg",
-  "/assets/gallery-2.jpg",
-  "/assets/gallery-3.jpg",
-  "/assets/gallery-4.jpg",
-  "/assets/gallery-5.jpg",
-  "/assets/swastik-1.png",
-  "/assets/swastik-2.png",
-  "/assets/swastik-3.png",
-  "/assets/swastik-4.png",
-  "/assets/swastik-5.png",
-  "/assets/swastik-6.png",
-  "/assets/swastik-7.png",
-  "/assets/swastik-8.png",
-  "/assets/swastik-9.png",
-  "/assets/swastik-10.png",
-  "/assets/gallery-11.jpg",
-  "/assets/gallery-12.jpg",
-  "/assets/gallery-13.jpg",
-  "/assets/gallery-14.jpg"
+  "/assets/resort-exterior.webp",
+  "/assets/resort-night.webp",
+  "/assets/haldi-ceremony.webp",
+  "/assets/gallery-1.webp",
+  "/assets/gallery-2.webp",
+  "/assets/gallery-3.webp",
+  "/assets/gallery-4.webp",
+  "/assets/gallery-5.webp",
+  "/assets/swastik-1.webp",
+  "/assets/swastik-2.webp",
+  "/assets/swastik-3.webp",
+  "/assets/swastik-4.webp",
+  "/assets/swastik-5.webp",
+  "/assets/swastik-6.webp",
+  "/assets/swastik-7.webp",
+  "/assets/swastik-8.webp",
+  "/assets/swastik-9.webp",
+  "/assets/swastik-10.webp",
+  "/assets/gallery-11.webp",
+  "/assets/gallery-12.webp",
+  "/assets/gallery-13.webp",
+  "/assets/gallery-14.webp"
 ];
 
 const Gallery = () => {
@@ -54,13 +54,13 @@ const Gallery = () => {
           {/* First set of images */}
           {galleryImages.map((src, idx) => (
             <div className="gallery-card" key={`group1-${idx}`}>
-              <img src={src} alt="Gallery moment" className="gallery-img" />
+              <img src={src} alt="Gallery moment" className="gallery-img" loading="lazy" />
             </div>
           ))}
           {/* Second set of images for seamless infinite scroll */}
           {galleryImages.map((src, idx) => (
             <div className="gallery-card" key={`group2-${idx}`}>
-              <img src={src} alt="Gallery moment" className="gallery-img" />
+              <img src={src} alt="Gallery moment" className="gallery-img" loading="lazy" />
             </div>
           ))}
         </div>

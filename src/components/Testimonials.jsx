@@ -58,7 +58,7 @@ const Testimonials = () => {
             >
               <div className="testimonial-header">
                 <div className="testimonial-profile">
-                  <img src={review.avatar} alt={review.name} className="testimonial-avatar" />
+                  <img src={review.avatar} alt={review.name} className="testimonial-avatar" loading="lazy" />
                   <div className="testimonial-info">
                     <h3 className="testimonial-name">{review.name}</h3>
                     <p className="testimonial-location">{review.location}</p>

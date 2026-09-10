@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Celebrate.css';
 
 const images = [
-  '/assets/celebration-main.jpg',
-  '/assets/celebration-birthday.jpg',
-  '/assets/celebration-mehendi.jpg',
-  '/assets/celebration-poolparty.jpg',
-  '/assets/celebration-corporate-new.jpg',
-  '/assets/celebration-kittyparty.jpg'
+  '/assets/celebration-main.webp',
+  '/assets/celebration-birthday.webp',
+  '/assets/celebration-mehendi.webp',
+  '/assets/celebration-poolparty.webp',
+  '/assets/celebration-corporate-new.webp',
+  '/assets/celebration-kittyparty.webp'
 ];
 
 const Celebrate = () => {
@@ -72,6 +72,7 @@ const Celebrate = () => {
                   src={images[currentIndex]}
                   alt={`Celebrate at Swastik ${currentIndex + 1}`} 
                   className="celebrate-img"
+                  loading="lazy"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -115,8 +116,8 @@ const Celebrate = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
       >
         <div className="celebrate-divider-inner">
-          <img src="/assets/balustrade-divider.png" alt="" className="divider-img" />
-          <img src="/assets/balustrade-divider.png" alt="" className="divider-img" />
+          <img src="/assets/balustrade-divider.webp" alt="" className="divider-img" loading="lazy" />
+          <img src="/assets/balustrade-divider.webp" alt="" className="divider-img" loading="lazy" />
         </div>
       </motion.div>
     </section>
