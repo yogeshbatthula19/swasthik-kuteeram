@@ -49,6 +49,22 @@ const BookingModal = ({ isOpen, onClose }) => {
 
       if (response.status === 200) {
         setStatus('success');
+        
+        // Format the WhatsApp message
+        const phoneNumber = "917670873921";
+        const waText = `Hello Swastik Kuteeram! I would like to book a stay.
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Email:* ${formData.email}
+*Date:* ${formData.date || 'Not specified'}
+*Guests:* ${formData.guests || 'Not specified'}
+*Message:* ${formData.message || 'None'}`;
+        
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waText)}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+
         setTimeout(() => {
           onClose();
           setStatus('idle');
@@ -78,8 +94,9 @@ const BookingModal = ({ isOpen, onClose }) => {
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <h3>Enquiry Sent Successfully!</h3>
-            <p>Please check your email for confirmation.</p>
+            <h3>Enquiry Sent!</h3>
+            <p>Opening WhatsApp to chat with us...</p>
+            <p style={{fontSize: '0.85rem', marginTop: '8px', opacity: 0.8}}>Please check your popup blocker if WhatsApp didn't open.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="booking-form">
