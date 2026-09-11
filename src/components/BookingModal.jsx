@@ -29,10 +29,14 @@ const BookingModal = ({ isOpen, onClose }) => {
     setErrorMessage('');
     
     try {
+      const currentDate = new Date();
+      const formattedDateTime = currentDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+
       const payload = {
         access_key: "8207b71d-11c4-4822-92b6-ebcc429086ce",
         subject: `New Booking Enquiry from ${formData.name}`,
         from_name: "Swastik Kuteeram Booking",
+        "Submission_Time": formattedDateTime,
         ...formData
       };
 
