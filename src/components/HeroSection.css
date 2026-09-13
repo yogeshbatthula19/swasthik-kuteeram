@@ -33,6 +33,14 @@
   z-index: 2;
 }
 
+.hero-video-main::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-video-main::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
 .hero-overlay-darken {
   position: absolute;
   inset: 0;

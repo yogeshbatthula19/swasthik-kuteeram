@@ -18,7 +18,6 @@ const HeroSection = ({ onOpenBooking }) => {
                 loop 
                 muted 
                 playsinline
-                poster="/assets/hero-bg.webp"
                 preload="metadata"
               >
                 <source src="/assets/hero-video.mp4" type="video/mp4" />
